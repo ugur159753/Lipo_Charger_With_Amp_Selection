@@ -21,7 +21,7 @@ void ADC_ConvertOneTime(unsigned char* triggerValue){
 	}
 }
 
-void ADC_ConvertSampleTime(unsigned char triggerValue,unsigned int sampleNumber){	//triggerin sampleNumber kadar kendini tekrar tetiklemesiasdf
+void ADC_ConvertSampleTime(unsigned char triggerValue,unsigned int sampleNumber){	//triggerin sampleNumber kadar kendini tekrar tetiklemesi
 	if((triggerValue) != sampleNumber){
 		ADC1->CR2 |= 0x40000000;
 	}

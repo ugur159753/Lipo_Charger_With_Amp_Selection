@@ -1,7 +1,12 @@
 #include <stm32f4xx.h>
 #include "initFunction.h"
 
-
+void SysTickBaslat(void){
+	SysTick->CTRL = 0;									 // Ayarlamalar icin sysTick sayiciyi kapat	
+	SysTick->LOAD = 0x00014821;					 // Saymaya baslayacagi sayiyi ayarla 0.5ms (Ayarlanan Deger=84001-1)
+	SysTick->VAL  = 0;									 // En son degeri sifirla
+	SysTick->CTRL|= 0x00000007;					 // Sayiciyi ana clk ve kesmeyle birlikte aktif et
+}
 
 void system_init(){
 	
