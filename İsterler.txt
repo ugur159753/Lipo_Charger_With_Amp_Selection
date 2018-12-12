@@ -1,0 +1,18 @@
+
+*1 hücreli lipo
+*3 akým seçeneði(þarj)
+	*0,5A
+	*1A						|
+	*2A						|zamana baðlý, voltaja baðlý, sýcaklýða baðlý durdurma
+*Güç boþaltrma akým seçeneði				|
+	*0,5A
+	*1A
+	*2A
+
+*A board key
+*2x16 Display
+*220V AC input
+
+*Boþalt -> þarj et -> bekle -> boþalt test prosedürü
+
+*Bilgileri serial port ile PC ye gönderme
