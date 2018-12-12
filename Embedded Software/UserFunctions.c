@@ -51,10 +51,10 @@ unsigned int sensorFilterRoutine(unsigned int sampleNumber, unsigned int maxAver
 		unsigned int ADCBufferAverage    = 0;								//ADC'de degerler okunduktan sonra ortalamanin tutulucagi degisken
 		
 		ADCBufferAverage = getAverage(sampleBuffer ,sampleNumber);
-		biggerOrSmaller = valueComparator(ADCBufferAverage, maxAverageValue);	//10 sample in ortalamasi 2000 den büyükse 1 kücükse 0 döner.
+		//biggerOrSmaller = valueComparator(ADCBufferAverage, maxAverageValue);	//10 sample in ortalamasi 2000 den büyükse 1 kücükse 0 döner.
 		(*BufferCounter) = 0;												//bir sonraki trigger da kullanmak için buggerCounteri temizle
 		
-		return biggerOrSmaller;
+		return ADCBufferAverage;
 	}
 	return 0;
 }

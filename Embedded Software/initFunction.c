@@ -28,7 +28,8 @@ void system_init(){
       RCC->CFGR 	|= 0x00000002;        										// Sistem Clk u PLL uzerinden besleyelim
 	
       while ((RCC->CFGR & 0x0000000F) != 0x0000000A);	  		// Besleninceye kadar bekle
-	
+			
+			//ADC1
 			
       RCC->AHB1ENR 	|= 0x00000004;    											  // GPIO C portu clock'u aktif edelim
       GPIOC->MODER   = 0x000000C0; 									  		  	// GPIO C portunun 3. pinini Analog input yaptik
@@ -47,4 +48,6 @@ void system_init(){
 			ADC1->SMPR1 |=0xFFFFFFFF;                               // En düsük çevirim hizi.
       ADC1->SMPR2 |=0xFFFFFFFF;                               // En düsük çevirim hizi.
 			
+			//ADC2
+			GPIOC->MODER   |= 0x000000C3; 									  		  	// GPIO C portunun 3. pinini Analog input yaptik
 }

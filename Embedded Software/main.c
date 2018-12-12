@@ -10,10 +10,11 @@ unsigned int maxAverageValue     = 2000;
 short        ADC_compareResult   = 0;
 unsigned int  BufferCounter      = 0;										//bufferda okuma yazma yapabilmek için gerekli sayici
 volatile unsigned long systickCNT = 0;
-
+unsigned char AdcBufferReadyFlag = 0;								//ADC 10 çevrim yapip ortalamas1n1 aldiginda bu flagi set eder
 
 void SysTick_Handler(void){
 	systickCNT++;
+	adcTrigger = 1;
 }
 
 
