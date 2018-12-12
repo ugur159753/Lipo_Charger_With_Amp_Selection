@@ -9,6 +9,14 @@ unsigned int sampleNumber        = 10;
 unsigned int maxAverageValue     = 2000;
 short        ADC_compareResult   = 0;
 unsigned int  BufferCounter      = 0;										//bufferda okuma yazma yapabilmek için gerekli sayici
+volatile unsigned long systickCNT = 0;
+
+
+void SysTick_Handler(void){
+	systickCNT++;
+}
+
+
 
 void ADC_IRQHandler(){   												//ADC kesme rutini
 	if(ADC1->SR & 0x0002){												//ADC çevrim tamamlandi bayragi kontrol ediliyor.
@@ -21,7 +29,9 @@ void ADC_IRQHandler(){   												//ADC kesme rutini
 
 
 int main(){
+	
 	system_init();
+	SysTickBaslat();											// 0.5 ms'de bir kesme olusacak sekilde ayarlandi
 	
 	while(1){
 			ADC_ConvertOneTime(&adcTrigger);                 			//ADC okumaya basladi
