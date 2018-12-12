@@ -1,0 +1,39 @@
+Dependencies for Project 'ADC10samAVR', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.c)(0x5B290E66)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\_M_ADC(10samplesAvarage)-I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\ST\STM32F4xx-DSTM32F40_41xxx-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (D:\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x532C47BA)
+I (D:\ARM\CMSIS\Include\core_cm4.h)(0x532C4C22)
+I (D:\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (D:\ARM\CMSIS\Include\core_cmInstr.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cmFunc.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C4C22)
+I (D:\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C47BA)
+I (main.h)(0x5B28FD60)
+I (initFunction.h)(0x5B28D23A)
+I (UserFunctions.h)(0x5B290E66)
+F (.\initFunction.c)(0x5B28D23A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\_M_ADC(10samplesAvarage)-I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\ST\STM32F4xx-DSTM32F40_41xxx-o .\initfunction.o --omf_browse .\initfunction.crf --depend .\initfunction.d)
+I (D:\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x532C47BA)
+I (D:\ARM\CMSIS\Include\core_cm4.h)(0x532C4C22)
+I (D:\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (D:\ARM\CMSIS\Include\core_cmInstr.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cmFunc.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C4C22)
+I (D:\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C47BA)
+I (initFunction.h)(0x5B28D23A)
+F (.\startup_stm32f40_41xxx.s)(0x5B27BC98)(--cpu Cortex-M4.fp -g --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\ST\STM32F4xx--list .\startup_stm32f40_41xxx.lst --xref -o .\startup_stm32f40_41xxx.o --depend .\startup_stm32f40_41xxx.d)
+F (.\UserFunctions.c)(0x5C0A6BE9)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\_M_ADC(10samplesAvarage)-I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\ST\STM32F4xx-DSTM32F40_41xxx-o .\userfunctions.o --omf_browse .\userfunctions.crf --depend .\userfunctions.d)
+I (D:\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x532C47BA)
+I (D:\ARM\CMSIS\Include\core_cm4.h)(0x532C4C22)
+I (D:\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (D:\ARM\CMSIS\Include\core_cmInstr.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cmFunc.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C4C22)
+I (D:\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C47BA)
+I (UserFunctions.h)(0x5B290E66)
+F (D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c)(0x532C477A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\_M_ADC(10samplesAvarage)-I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\ST\STM32F4xx-DSTM32F40_41xxx-o .\system_stm32f4xx.o --omf_browse .\system_stm32f4xx.crf --depend .\system_stm32f4xx.d)
+I (D:\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x532C47BA)
+I (D:\ARM\CMSIS\Include\core_cm4.h)(0x532C4C22)
+I (D:\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (D:\ARM\CMSIS\Include\core_cmInstr.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cmFunc.h)(0x532C4C22)
+I (D:\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C4C22)
+I (D:\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C47BA)
