@@ -52,5 +52,18 @@ void system_init(){
 			//GPIOC->MODER   |= 0x000000C3; 									  		  	// GPIO C portunun 3. pinini Analog input yaptik
 }
 
+void initButtons(){
+	GPIOC->MODER		&=	 ~((3UL << 4*2)	| (3UL << 5*2 )  );	 		    // Digital Input PC4, PC5										 			
+	GPIOC->OSPEEDR	|=	  ((3UL << 4*2)	| (3UL << 5*2 )	 );					// PC4, PC5 Very High Speed 									 		
+	GPIOC->PUPDR	  &=	 ~((3UL << 4*2)	| (3UL << 5*2 )	 );					// No PullUp-Pull Down for PC4, PC5
+	
+	GPIOA->MODER		&=   ~((3UL << 13*2)	| (3UL << 14*2 )   ); 		// Digital Input PA13, PA14		
+	GPIOA->OSPEEDR	|=	  ((3UL << 13*2)	| (3UL << 14*2 )	 );			//PC4, PC5 Very High Speed
+	GPIOA->PUPDR		&=	 ~((3UL << 13*2)	| (3UL << 14*2 )	 );			//No PullUp-Pull Down for PA13, PA14
+	
+	GPIOB->MODER		&=   ~((3UL << 1*2));													 	// Digital Input PB1	
+	GPIOB->OSPEEDR	|=	  ((3UL << 1*2));														//PC4, PC5 Very High Speed
+	GPIOB->PUPDR		&=	 ~((3UL << 1*2));														//No PullUp-Pull Down for PB1
+}
 
 

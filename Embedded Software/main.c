@@ -33,7 +33,7 @@ int main(){
 	
 	system_init();
 	SysTickBaslat();											
-	
+	initButtons();
 	while(1){
 			ADC_ConvertOneTime(&adcTrigger);                 			//ADC okumaya basladi
 	}

@@ -39,7 +39,7 @@ short valueComparator(unsigned int data, unsigned int maxValue){
 
 unsigned int sensorFilterRoutine(unsigned int sampleNumber, unsigned int maxAverageValue, unsigned int* sampleBuffer, unsigned int* BufferCounter){
 	
-	short				  biggerOrSmaller  	 = 0;
+	//short				  biggerOrSmaller  	 = 0;
 	
 	sampleBuffer[(*BufferCounter)] = ADC1->DR;				//ADC okur
 	(*BufferCounter)++;												  		//tek trigger da 10 okuma yapmasi için gerekli counter
