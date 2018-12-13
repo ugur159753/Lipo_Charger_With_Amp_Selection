@@ -8,4 +8,4 @@ void ADC_ConvertSampleTime(unsigned char triggerValue, unsigned int BufferCounte
 
 short valueComparator(unsigned int, unsigned int);	//ADC den gelen digital degeri istenen degerle kars1lastirir	
 
-unsigned int sensorFilterRoutine(unsigned int sampleNumber, unsigned int maxAverageValue, unsigned int* sampleBuffer,unsigned int *BufferCounter);
+void sensorFilterRoutine(unsigned int sampleNumber, unsigned int maxAverageValue, unsigned int* sampleBuffer,unsigned int *BufferCounter, unsigned char*, unsigned int*);

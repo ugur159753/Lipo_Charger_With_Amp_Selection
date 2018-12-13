@@ -37,24 +37,19 @@ short valueComparator(unsigned int data, unsigned int maxValue){
 	}
 }
 
-unsigned int sensorFilterRoutine(unsigned int sampleNumber, unsigned int maxAverageValue, unsigned int* sampleBuffer, unsigned int* BufferCounter){
+void sensorFilterRoutine(unsigned int sampleNumber, unsigned int maxAverageValue, unsigned int* sampleBuffer, unsigned int* BufferCounter, unsigned char* AdcBufferReadyFlag,unsigned int* ADCBufferAverage){
 	
-	//short				  biggerOrSmaller  	 = 0;
-	
-	sampleBuffer[(*BufferCounter)] = ADC1->DR;				//ADC okur
-	(*BufferCounter)++;												  		//tek trigger da 10 okuma yapmasi için gerekli counter
+	sampleBuffer[(*BufferCounter)] = ADC1->DR;																		//ADC okur
+	(*BufferCounter)++;												  																	//tek trigger da 10 okuma yapmasi için gerekli counter
 	
 	if((*BufferCounter) != sampleNumber){										
 		ADC_ConvertSampleTime((*BufferCounter), sampleNumber);											//eger 10 conversion yapilmadiysa tekrar adc yi tetikle
 	}
-	else if((*BufferCounter) == sampleNumber){								//eger 10 conversion yapildiysa diziyi ve eleman sayisini getAverage a gönder
-		unsigned int ADCBufferAverage    = 0;								//ADC'de degerler okunduktan sonra ortalamanin tutulucagi degisken
+	else if((*BufferCounter) == sampleNumber){																		//eger 10 conversion yapildiysa diziyi ve eleman sayisini getAverage a gönder
 		
-		ADCBufferAverage = getAverage(sampleBuffer ,sampleNumber);
-		//biggerOrSmaller = valueComparator(ADCBufferAverage, maxAverageValue);	//10 sample in ortalamasi 2000 den büyükse 1 kücükse 0 döner.
-		(*BufferCounter) = 0;												//bir sonraki trigger da kullanmak için buggerCounteri temizle
+		*ADCBufferAverage = getAverage(sampleBuffer ,sampleNumber);
 		
-		return ADCBufferAverage;
+		(*BufferCounter) = 0;																												//bir sonraki trigger da kullanmak için buggerCounteri temizle
+
 	}
-	return 0;
 }
