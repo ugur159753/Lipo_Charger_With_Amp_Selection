@@ -49,5 +49,8 @@ void system_init(){
       ADC1->SMPR2 |=0xFFFFFFFF;                               // En düsük çevirim hizi.
 			
 			//ADC2
-			GPIOC->MODER   |= 0x000000C3; 									  		  	// GPIO C portunun 3. pinini Analog input yaptik
+			//GPIOC->MODER   |= 0x000000C3; 									  		  	// GPIO C portunun 3. pinini Analog input yaptik
 }
+
+
+

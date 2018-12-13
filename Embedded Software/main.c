@@ -32,7 +32,7 @@ void ADC_IRQHandler(){   												//ADC kesme rutini
 int main(){
 	
 	system_init();
-	SysTickBaslat();											// 0.5 ms'de bir kesme olusacak sekilde ayarlandi
+	SysTickBaslat();											
 	
 	while(1){
 			ADC_ConvertOneTime(&adcTrigger);                 			//ADC okumaya basladi
