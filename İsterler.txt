@@ -16,3 +16,4 @@
 *Boþalt -> þarj et -> bekle -> boþalt test prosedürü
 
 *Bilgileri serial port ile PC ye gönderme
+

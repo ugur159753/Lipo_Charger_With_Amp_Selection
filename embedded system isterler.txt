@@ -1,0 +1,6 @@
+adaptör mü kullanýlacak yoksa transformatör ile dc rectifier devresi mi yapýlacak
+
+
+6*2n2222
+2*lm317T
+2*bcx54c
