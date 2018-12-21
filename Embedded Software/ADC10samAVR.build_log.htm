@@ -2,32 +2,74 @@
 <body>
 <pre>
 <h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Ugur Ozdemir, mdya, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.26.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
 <h2>Project:</h2>
-C:\Users\ASUS\Desktop\Embeded Projectr\Lipo_Charger_With_Amp_Selection(GÝThub)\Embedded Software\ADC10samAVR.uvproj
-Project File Date:  12/13/2018
+C:\Users\ASUS\Desktop\Embeded Projectr\Lipo_Charger_With_Amp_Selection(GÝThub)\Embedded Software\ADC10samAVR.uvprojx
+Project File Date:  12/18/2018
 
 <h2>Output:</h2>
-Build target 'Target 1'
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f40_41xxx.s...
+compiling initFunction.c...
+compiling system_stm32f4xx.c...
+D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c(306): error:  #147: declaration is incompatible with "const uint8_t AHBPrescTable[16]"  (declared at line 76 of "C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h")
+    __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c(424): error:  #20: identifier "HSI_VALUE" is undefined
+        SystemCoreClock = HSI_VALUE;
+D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c(427): error:  #20: identifier "HSE_VALUE" is undefined
+        SystemCoreClock = HSE_VALUE;
+D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c(485): error:  #20: identifier "HSE_STARTUP_TIMEOUT" is undefined
+    } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c(522): error:  #20: identifier "PLL_N" is undefined
+      RCC->PLLCFGR = PLL_M | (PLL_N << 6) | (((PLL_P >> 1) -1) << 16) |
+D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c(522): error:  #20: identifier "PLL_P" is undefined
+      RCC->PLLCFGR = PLL_M | (PLL_N << 6) | (((PLL_P >> 1) -1) << 16) |
+D:\ARM\Startup\ST\STM32F4xx\system_stm32f4xx.c: 0 warnings, 6 errors
+compiling UserFunctions.c...
 compiling main.c...
-linking...
-Program Size: Code=1592 RO-data=424 RW-data=48 ZI-data=1832  
-".\ADC10samAVR.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\ASUS\\Desktop\\Embeded Projectr\\Lipo_Charger_With_Amp_Selection(GÝThub)\\Embedded Software\\ADC10samAVR.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Error: Target DLL has been cancelled. Debugger aborted !
+".\ADC10samAVR.axf" - 6 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
+                Keil.STM32F4xx_DFP.2.13.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+Target not created.
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>
-.c...
-".\ADC10samAVR.axf" - 1 Error(s), 0 Warning(s).
-Target not created
-pleBuffer ,sampleNumber);
-UserFunctions.c(54): error:  #118: a void function may not return a value
-                return ADCBufferAverage;
-UserFunctions.c: 0 warnings, 2 errors
-".\ADC10samAVR.axf" - 3 Error(s), 0 Warning(s).
-Target not created
-ng(s).
